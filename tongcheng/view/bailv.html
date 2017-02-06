@@ -7,8 +7,11 @@
     <title></title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/bailv.css">
-     <link rel="shorttcut icon" type="images/jpeg" href="../images/images1/icon.jpg">
+    <link rel="stylesheet" href="../css/jquery.fs.scroller.css">
     <script src="../js/underscore/underscore.js"></script>
+    <script src="../js/jquery/dist/jquery.min.js"></script>
+    <script src="../js/jquery.fs.scroller.js"></script>
+
 </head>
 
 <body>
@@ -17,7 +20,7 @@
         <div class="container clearfix">
             <div class="l-top-left">
                 <span>您好，欢迎使用LY.com访问同程！</span>
-               <a href="login.html" class="login">登录</a>
+                <a href="login.html" class="login">登录</a>
                 <a href="register.html" class="reg">注册</a>
                 <a href="#" style="margin: 2px 0 0 8px;height: 22px;"><img src="../images/images1/dnRKSH.gif" alt=""></a>
             </div>
@@ -84,17 +87,12 @@
             <li><a href="../homePage.html">首页</a></li>
             <li><a href="jiudian.html">酒店</a></li>
             <li><a href="index.html">机票</a></li>
-            
             <li><a href="busTicket.html">汽车票</a></li>
-            
             <li><a href="travelAround.html">周边游</a><span class="l-hot">Hot</span></li>
-            
             <li><a href="chujing.html">出境游</a></li>
             <li><a href="youlun.html">游轮</a></li>
-           
             <li><a href="DZLY.html">定制旅游</a></li>
             <li><a href="bank.html">金融</a></li>
-            
             <li class="active"><a href="bailv.html">百旅会</a><span class="l-hot">中老年</span></li>
         </ul>
     </div>
@@ -127,24 +125,19 @@
                             </div>
                         </div>
                         <div class="videolistBox">
-                            <div style="position:relative">
-                                <div id="videoList" class="msp_container">
-                                    <ul>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                        <li>旅游卫视-首届中国中老年旅游春晚深圳海选</li>
-                                    </ul>
+                            <div style="position:relative;height: 100%">
+                                <div id="videoList" class="scrollbar" >
+                                <ul>
+                                    <li class="lifirst">旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                    <li>旅游卫视-首届中国中老年旅游春晚济南海选开启</li>
+                                </ul>
                                 </div>
                                 <div class="ins_scroller">
                                     <div id="ins_scroll_bar"></div>
@@ -393,8 +386,16 @@
             <li><a href="#">格林豪泰连锁酒店</a></li>
         </ul>
     </div>
-    <script src="../js/jquery/dist/jquery.min.js"></script>
     <script src="../js/bailv.js"></script>
+    <script>
+    $(document).ready(function(e) {
+        $(".scrollbar").scroller({
+            customClass: "advanced",
+            trackMargin: 15,
+            handleSize: 40
+        });
+    });
+    </script>
 </body>
 
 </html>
